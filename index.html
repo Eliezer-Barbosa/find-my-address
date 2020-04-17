@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+          crossorigin="anonymous">
+    <title>Search CEP</title>
+</head>
+<body style="margin-top: 15px; background-color: #d9e2ec;">
+    <div class="container" style="background-color: #3b7fb6;">
+        <div class="jumbotron" 
+            style="background-color: #6a7ef0">
+            <h1 class="display-4" style="color: #dde6d8;";>Brazilian CEP Finder!</h1>
+            <p class="lead" style="color: #dde6d8;">This is a web application that finds an address by CEP</p>
+            <hr class="my-4">
+            <p class="lead" style="color: #dde6d8;">If you don't have any cep in mind, just get a random one. </p>
+            <button class="btn btn-light btn-lg" 
+                    onclick="getRandomCep()">Get a random CEP</button>
+            <hr>
+            <h2 style="color: #dde6d8;" id="randomCep"></h2>
+            <h2 style="color: #f8f6f585;" id="message" style="color: darkred;"></h2>
+        </div>
+        <p class="lead" style="color: #dde6d8;" >Inform CEP then press TAB</p>
+
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">CEP</span>
+            </div>
+            <input id="txtCep" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">City</span>
+              </div>
+              <input disabled="true" id="txtCidade" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">State</span>
+              </div>
+              <input disabled="true" id="txtEstado" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">County</span>
+              </div>
+              <input disabled="true" id="txtBairro" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Address</span>
+              </div>
+              <input disabled="true" id="txtRua" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+
+        <button class="btn btn-warning btn-block" 
+                type="button" 
+                onclick="clearFields()">Clear
+        </button>
+
+        <!-- <button class="btn btn-dark" 
+                onclick="getJoke()" style="margin-top: 14px;">Get a Chuck Norris Joke
+        </button> -->
+
+    </div>
+    <script src="js/script.js"></script>   
+</body>
+</html>
