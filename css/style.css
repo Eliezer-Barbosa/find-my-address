@@ -1,0 +1,55 @@
+body {
+    margin-top: 15px;
+    background-color: #d9e2ec;
+}
+
+.container {
+    background-color: #3b7fb6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jumbotron {
+    background-color: #3b7fb6;
+    text-align: center;
+}
+
+.link {
+    color: #1e374f;
+    display: block;
+}
+
+.link:hover {
+    color: #dde6d8;
+    text-decoration: none;
+    
+}
+
+.weather-section {
+   text-align: center;
+   position: absolute;
+   left: 200x;
+   top: 50px;
+
+}
+
+.weather {
+    color: #dde6d8;
+}
+
+#weather-location {
+    font-size: large;
+    font-weight: bold;
+}
+
+#weather-degree {
+    font-size: xx-large;
+}
+
+.address-form {
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    
+  }

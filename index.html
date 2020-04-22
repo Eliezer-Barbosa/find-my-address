@@ -10,33 +10,48 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
           crossorigin="anonymous">
-    <title>Search CEP</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>find_my_address_APP</title>
 </head>
-<body style="margin-top: 15px; background-color: #d9e2ec;">
-    <div class="container" style="background-color: #3b7fb6;">
-        <div class="jumbotron" 
-            style="background-color: #6a7ef0">
-            <h1 class="display-4" style="color: #dde6d8;";>Brazilian CEP Finder!</h1>
-            <p class="lead" style="color: #dde6d8;">This is a web application that finds an address by CEP</p>
-            <hr class="my-4">
-            <p class="lead" style="color: #dde6d8;">If you don't have any cep in mind, just get a random one. </p>
-            <button class="btn btn-light btn-lg" 
-                    onclick="getRandomCep()">Get a random CEP</button>
-            <hr>
-            <h2 style="color: #dde6d8;" id="randomCep"></h2>
-            <h2 style="color: #f8f6f585;" id="message" style="color: darkred;"></h2>
-        </div>
-        <p class="lead" style="color: #dde6d8;" >Inform CEP then press TAB</p>
+<body>
+    <div class="container">
+        <div class="jumbotron">
 
-        <div class="input-group input-group-sm mb-3">
+          <div class="weather-section">
+            <p id="weather-location" class="weather"></p>
+            <p id="weather-description" class="weather"></p>
+            <p id="weather-degree" class="weather"></p>
+          </div>
+
+          <h1 id="header" class="display-4" style="color: #dde6d8;";>Find My Address!</h1>
+          <p class="lead" style="color: #dde6d8;">This is a web application that finds an address by CEP</p>
+          <hr class="my-4">
+          <p class="lead" style="color: #dde6d8;">If you don't have any cep in mind, just get a random one. </p>
+          <button class="btn btn-light btn-lg" 
+                  onclick="getRandomCep()">Get a random CEP
+          </button>
+
+          <a class="link" href="https://cep.guiamais.com.br/busca/sao+paulo-sp" target="about_blank">
+            you can find a list of addresses here
+          </a>
+
+          <hr>
+          <h2 style="color: #dde6d8;" id="randomCep"></h2>
+          <h2 style="color: #f8f6f585;" id="message" style="color: darkred;"></h2>
+        </div>
+
+        <div class="address-form">
+          <p class="lead" style="color: #dde6d8;" >Inform CEP then press TAB</p>
+
+          <div class="input-group input-group-sm mb-3">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroup-sizing-default">CEP</span>
             </div>
             <input id="txtCep" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        </div>
+          </div>
 
-        <div class="input-group input-group-sm mb-3">
+          <div class="input-group input-group-sm mb-3">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-default">City</span>
@@ -67,7 +82,8 @@
               </div>
               <input disabled="true" id="txtRua" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           </div>
-
+        </div>
+        
         <button class="btn btn-warning btn-block" 
                 type="button" 
                 onclick="clearFields()">Clear
