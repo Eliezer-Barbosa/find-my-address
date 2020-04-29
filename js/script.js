@@ -5,7 +5,7 @@ $(document).ready(function() {
         $(".weather-section").fadeOut("slow")
         getWeather(); 
         $(".weather-section").fadeIn("slow")
-    }, 10000);
+    }, 8000);
 
     // when the focus in out of the textCep  input, this function is activated
     $("#txtCep").focusout(function() {
@@ -95,8 +95,8 @@ function getRandomCep() {
     // get a random cep from the array
     const random = Math.floor(Math.random() * 10);
     document.getElementById("randomCep").innerHTML = ceps[random]
-    // clear cep after 5 seconds
-    setTimeout(clearRandomCep, 5000);
+    // clear cep after 10 seconds
+    setTimeout(clearRandomCep, 10000);
 }
 
 // display a random chuck norris joke from the API
